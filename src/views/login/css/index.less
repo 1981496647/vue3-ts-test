@@ -1,0 +1,40 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: url('../../../assets/login.webp') no-repeat ;
+  background-size: 100% 100%;
+  .login-panel {
+    width: 320px;
+    margin-bottom: 15%;
+    .title {
+      text-align: center;
+    }
+    .demo-tabs > .el-tabs__content {
+      height: 100px;
+    }
+    .edit {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      a {
+        text-decoration: none;
+        font-size: 14px;
+        color: #409eff;
+      }
+      .el-checkbox-group {
+        .el-checkbox--default {
+          .el-checkbox__label {
+            color: #409eff;
+          }
+        }
+      }
+    }
+    .el-button--primary{
+      display: block;
+      width: 100%;
+    }
+  }
+}
