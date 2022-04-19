@@ -2,7 +2,7 @@
  * @Author       : 林青云
  * @Date         : 2022-04-13 12:54:02
  * @LastEditors  : 林青云
- * @LastEditTime : 2022-04-19 10:40:06
+ * @LastEditTime : 2022-04-19 12:32:19
  * @Description  : file content
  * @FilePath     : \vue3-ts-test\src\service\request\request.ts
  */
@@ -47,7 +47,7 @@ class QYResquest {
     )
   }
   resquest<T = any>(config: QYResquestConfig<T>): Promise<T> {
-    return new Promise((reslove, reject) => {
+    return new Promise((reslove) => {
       this.instance.request(config).then((res) => {
         reslove(res.data)
       })
