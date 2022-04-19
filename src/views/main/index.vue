@@ -2,7 +2,7 @@
  * @Author       : 林青云
  * @Date         : 2022-04-19 11:17:08
  * @LastEditors  : 林青云
- * @LastEditTime : 2022-04-19 16:05:42
+ * @LastEditTime : 2022-04-19 17:16:33
  * @Description  : file content
  * @FilePath     : \vue3-ts-test\src\views\main\index.vue
 -->
@@ -10,21 +10,10 @@
   <div class="common-layout">
     <el-container class="contaniner">
       <el-aside width="200px">
-        <el-scrollbar>
-          <el-menu :default-openeds="['1', '3']">
-            <el-sub-menu index="1">
-              <template #title>
-                <el-icon><message /></el-icon>Navigator One
-              </template>
-              <el-menu-item-group>
-                <!-- <template #title>Group 1</template> -->
-                <el-menu-item index="1-1">Option 1</el-menu-item>
-                <el-menu-item index="1-2">Option 2</el-menu-item>
-                <NavMenu />
-              </el-menu-item-group>
-            </el-sub-menu>
-          </el-menu>
-        </el-scrollbar>
+        <!-- <el-menu default-active="2" class="el-menu-certical">
+          <template v-for="item in userMenus"> </template>
+        </el-menu> -->
+        <NavMenu />
       </el-aside>
       <el-container>
         <el-header>Header</el-header>
@@ -37,10 +26,18 @@
 
 <script lang="ts">
 import { NavMenu } from '@/components/nav-menu'
-import { defineComponent } from 'vue'
+import { defineComponent, computed } from 'vue'
+import { useStore } from '@/store'
 export default defineComponent({
   name: 'Vue3TsTestIndex',
-  components: { NavMenu }
+  setup() {
+    const store = useStore()
+    const userMenus = store.state.login.auserMenu
+    return {
+      userMenus
+    }
+  }
+  // components: { NavMenu }
 })
 </script>
 

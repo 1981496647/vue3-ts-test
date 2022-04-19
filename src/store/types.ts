@@ -2,7 +2,7 @@
  * @Author       : 林青云
  * @Date         : 2022-04-18 14:59:00
  * @LastEditors  : 林青云
- * @LastEditTime : 2022-04-19 11:10:47
+ * @LastEditTime : 2022-04-19 16:57:20
  * @Description  : file content
  * @FilePath     : \vue3-ts-test\src\store\types.ts
  */
@@ -15,4 +15,8 @@ interface ILoginState {
   id: string
   auserMenu: Array<any>
 }
-export { IRootState, ILoginState }
+interface IRootAndModule {
+  login: ILoginState
+}
+export type IStoreType = IRootState & IRootAndModule
+export { IRootState, ILoginState, IRootAndModule }
