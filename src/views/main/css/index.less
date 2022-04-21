@@ -4,13 +4,22 @@
   .contaniner {
     height: 100%;
     .el-aside {
-      background-color: slategray;
+      background-color: #001529;
+      transition: all 0.3s;
+      overflow-x: hidden;
+      .el-menu{
+        border-right: none;
+      }
     }
     .el-header {
-      background-color: #2d8cf0;
+      .header-nav {
+        .open {
+          font-size: 30px;
+          cursor: pointer;
+        }
+      }
     }
-    .el-footer{
-
+    .el-footer {
     }
   }
 }

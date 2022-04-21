@@ -18,5 +18,5 @@ interface ILoginState {
 interface IRootAndModule {
   login: ILoginState
 }
-export type IStoreType = IRootState & IRootAndModule
-export { IRootState, ILoginState, IRootAndModule }
+type IStoreType = IRootState & IRootAndModule
+export { IRootState, ILoginState, IRootAndModule, IStoreType }

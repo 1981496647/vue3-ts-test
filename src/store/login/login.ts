@@ -2,7 +2,7 @@
  * @Author       : 林青云
  * @Date         : 2022-04-18 14:55:37
  * @LastEditors  : 林青云
- * @LastEditTime : 2022-04-19 12:24:43
+ * @LastEditTime : 2022-04-21 17:36:10
  * @Description  : file content
  * @FilePath     : \vue3-ts-test\src\store\login\login.ts
  */
@@ -38,6 +38,7 @@ const loginModule: Module<ILoginState, IRootState> = {
     changeUserMenu(state, payload) {
       console.log(payload)
       state.auserMenu = payload
+      // 拿到routers  添加到router的children
     }
   },
   actions: {
